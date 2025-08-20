@@ -118,3 +118,16 @@ function main() {
 }
 
 main();
+
+import express from "express";
+
+const app = express();
+const PORT = process.env.PORT || 3000;
+
+app.get("/", (req, res) => {
+  res.send("Backend do JDB está rodando!");
+});
+
+app.listen(PORT, () => {
+  console.log(`Servidor web ativo na porta ${PORT}`);
+});
