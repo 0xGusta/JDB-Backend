@@ -112,7 +112,7 @@ function main() {
     jdbContract.on("RandomNumberFulfilled", processDrawResult);
     console.log("Ouvindo evento 'RandomNumberFulfilled' para processar o sorteio.");
 
-    const CRON_SCHEDULE = '*/2 * * * *';
+    const CRON_SCHEDULE = "0 23 * * *";
     cron.schedule(CRON_SCHEDULE, scheduleDrawTrigger);
     console.log(`Sorteios agendados para rodar conforme o padrão: "${CRON_SCHEDULE}"`);
 }
@@ -131,3 +131,4 @@ app.get("/", (req, res) => {
 app.listen(PORT, () => {
   console.log(`Servidor web ativo na porta ${PORT}`);
 });
+
