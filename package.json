@@ -1,0 +1,16 @@
+{
+  "name": "jdb-leaderboard-server",
+  "version": "1.0.0",
+  "description": "Server to submit player data to Monad Games ID Leaderboard for JDB.",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "ethers": "^6.13.1",
+    "node-cron": "^3.0.3"
+  }
+}
+
